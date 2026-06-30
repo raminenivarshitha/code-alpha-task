@@ -1,4 +1,4 @@
-const apiKey = "YOUR_API_KEY";
+const apiKey = "8f7xxxxxxxxxxxxxxxxxxxxxxxx";
 
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -35,9 +35,13 @@ async function getWeather(cityName) {
 
         const response = await fetch(url);
 
-        if(!response.ok){
-            throw new Error("City not found");
-        }
+        const data = await response.json();
+console.log(data);
+
+if (!response.ok) {
+    alert(data.message);
+    throw new Error(data.message);
+}
 
         const data = await response.json();
 
