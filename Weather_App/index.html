@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="weather-card">
+
+            <h1>🌤 Weather App</h1>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name">
+
+                <button id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+            <!-- Loading -->
+            <div id="loading" class="loading">
+                Loading...
+            </div>
+
+            <!-- Error -->
+            <div id="error" class="error">
+                City not found!
+            </div>
+
+            <!-- Weather Data -->
+            <div id="weather" class="weather">
+
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="Weather Icon">
+
+                <h2 id="city">City</h2>
+
+                <h1 id="temperature">0°C</h1>
+
+                <h3 id="description">
+                    Weather
+                </h3>
+
+                <div class="details">
+
+                    <div class="box">
+                        <i class="fa-solid fa-temperature-half"></i>
+                        <p>Feels Like</p>
+                        <span id="feelsLike">0°C</span>
+                    </div>
+
+                    <div class="box">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>Humidity</p>
+                        <span id="humidity">0%</span>
+                    </div>
+
+                    <div class="box">
+                        <i class="fa-solid fa-wind"></i>
+                        <p>Wind</p>
+                        <span id="wind">0 km/h</span>
+                    </div>
+
+                    <div class="box">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <p>Pressure</p>
+                        <span id="pressure">0 hPa</span>
+                    </div>
+
+                </div>
+
+                <div class="extra">
+
+                    <div>
+                        🌅 Sunrise:
+                        <span id="sunrise">--:--</span>
+                    </div>
+
+                    <div>
+                        🌇 Sunset:
+                        <span id="sunset">--:--</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
